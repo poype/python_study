@@ -4,3 +4,11 @@
 message = "Hello Python World!"
 
 print(message)
+
+# 双引号字符串，包含单引号
+message1 = "it's a string"
+print(message1)
+
+# 单引号字符串，包含双引号
+message2 = 'he said: "this is a test" '
+print(message2)
