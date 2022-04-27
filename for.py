@@ -30,4 +30,10 @@ print("--------------------------")
 number_list = list(range(1, 5))
 print(number_list)
 
+# 生成列表的一种骚方式
+number_list = [value for value in range(0, 11, 2)]
+print(number_list)
 
+# 还能做一些简单的运算
+number_list = [value ** 2 for value in range(0, 11, 2)]
+print(number_list)
