@@ -1,6 +1,4 @@
 # 一个列表中可以包含不同类型的元素
-from turtle import color
-
 
 colors = ['red', 'green', 'yellow', 1, 2, 3.14]
 print(colors)
@@ -74,3 +72,9 @@ print(chars) # ['c', 'd', 'b', 'a']
 
 # 列表长度 len
 print(len(chars))
+
+# max、min、sum三个函数对数字列表执行简单的统计计算
+nums = [1, 2, 3, 4, 5]
+print(f"max value: {max(nums)}")
+print(f"min value: {min(nums)}")
+print(f"sum value: {sum(nums)}")
