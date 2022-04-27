@@ -37,3 +37,4 @@ print(number_list)
 # 还能做一些简单的运算
 number_list = [value ** 2 for value in range(0, 11, 2)]
 print(number_list)
+
