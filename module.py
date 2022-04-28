@@ -25,3 +25,9 @@ print(full_name)
 # 导入模块中的所有函数，但最好不要这么做
 from function import *
 
+# 建立一个单独的文件夹作为package
+# 注意在module文件夹中，必须包含__init__.py文件，只有包含这个文件，python才会认为它是一个package
+# 如果module文件夹下没有__init__.py文件，会看到错误：No module named 'module.function_module'; 'module' is not a package
+from module.function_module import test_func
+test_func()
+
