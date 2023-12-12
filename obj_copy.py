@@ -1,3 +1,5 @@
+import copy
+
 # 拷贝一维数组的四种方式
 original_list = [1, 2, 3, 4, 5]
 
@@ -30,4 +32,14 @@ list4[4] = 666  # 只有list4中第4个元素被修改了，original_list中的�
 print(list4)
 print(original_list)
 
+# 深拷贝二维数组，注意是深拷贝
+original_matrix = [[-1 for _ in range(3)] for _ in range(3)]
 
+# 使用copy模块中的deepcopy方法实现深拷贝，深拷贝整个二维数组也就只有这一种方法
+matrix2 = copy.deepcopy(original_matrix)
+matrix2[0][0] = 100
+print(matrix2)  # 只有matrix2中[0][0]元素被修改了，original_matrix中的元素并没有变
+print(original_matrix)
+
+# deepcopy 方法的注释
+# Deep copy operation on arbitrary Python objects
