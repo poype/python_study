@@ -43,3 +43,19 @@ for e in s4:
 # 集合中的元素：1
 # 集合中的元素：2
 # 集合中的元素：3
+
+
+tup = (1, 2, 2, 3, 5)
+print(3 in tup)  # True
+print(10 in tup)  # False
+
+l = ['a', 'c', 'd', 'e', 'a']
+print('a' in l)  # True
+print('h' in l)  # False
+
+d = {'a': 1, 'c': 3, 'e': 4}  # 对于字典，in 操作符判断是对应的key是否存在
+print('c' in d)  # True
+print('h' in d)  # False
+print(1 in d)  # 判断的是key，不是value，1是value的值，不是key的值，所以是False
+
+print(1 in d.values())  # 判断某个value是否存在，True
