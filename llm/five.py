@@ -25,6 +25,9 @@ class Conversation:
             return e
 
         message = response.choices[0].message.content
+
+        print(f"token: {response.usage.total_tokens}")  # 打印消耗的token
+
         self.messages.append({"role": "assistant", "content": message})
 
         if len(self.messages) > self.num_of_round*2 + 1:
@@ -60,3 +63,6 @@ print("Assistant : %s\n" % conv1.ask(question3))
 # 你需要把历史上的对话一起发送给 OpenAI 的接口，它才能有理解整个对话的上下文的能力。
 
 # 相比于之前实现的聊天机器人，ChatCompletion接口不但用起来更容易，速度还快，而且价格也更便宜，可谓是物美价廉了。
+
+# 大模型的功能就是根据你给他的一大段文字去续写后面的内容，所以要实现聊天的功能，需要每次把全部历史聊天记录全部发给大模型。
+# 像这样发送大量文本会浪费很多token
