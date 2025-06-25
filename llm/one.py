@@ -35,3 +35,8 @@ Man Utd must win trophies, says Ten Hag ahead of League Cup final
 """
 
 print(get_response(prompt2))
+
+
+# OpenAI 就只提供了 Complete 和 Embedding 两个接口:
+# 1. Complete 可以让模型根据你的输入进行自动续写
+# 2. Embedding 可以将你输入的文本转化成向量
